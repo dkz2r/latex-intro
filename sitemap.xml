@@ -1,51 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/02-document-structure.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/LICENSE.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/03-error-handling.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/citation.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/04-logical-structure.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/index.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/05-document-classes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/06-extending-latex.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/07-using-graphics.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/LICENSE.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/08-tables.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/citation.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/09-cross-references.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/index.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/10-mathematics-and-scientific-units.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/introduction.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/11-font-format-and-spacing.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/profiles.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/12-documentation-and-finding-help.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/reference.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/introduction.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/profiles.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/reference.html</loc>
+    <loc>https://dkz2r.github.io/latex-intro/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/citation.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/images.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/index.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/02-document-structure.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/03-error-handling.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/04-logical-structure.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/05-document-classes.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/06-extending-latex.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/07-using-graphics.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/08-tables.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/09-cross-references.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/10-mathematics-and-scientific-units.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/11-font-format-and-spacing.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/12-documentation-and-finding-help.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/404.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/citation.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/images.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://dkz2r.github.io/latex-intro/reference.html</loc>
   </url>
 </urlset>
