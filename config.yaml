@@ -18,13 +18,13 @@ carpentry: 'incubator'
 # carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'An Introduction to LaTeX Typesetting'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: ~ # FIXME
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'LaTeX, intro, The Carpentries' # FIXME
 
 # Life cycle stage of the lesson
 # refer to <https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html> for details
@@ -35,13 +35,13 @@ life_cycle: 'pre-alpha' # FIXME
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+source: 'https://github.com/dkz2r/latex-intro' # FIXME
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'info@dkz2r.de' # FIXME
 
 # Navigation ------------------------------------------------
 #
@@ -66,17 +66,28 @@ contact: 'team@carpentries.org' # FIXME
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
-- introduction.md
+episodes:
+- 01-introduction.md
+- 02-document-structure.md
+- 03-error-handling.md
+- 04-logical-structure.md
+- 05-document-classes.md
+- 06-extending-latex.md
+- 07-using-graphics.md
+- 08-tables.md
+- 09-cross-references.md
+- 10-mathematics-and-scientific-units.md
+- 11-font-format-and-spacing.md
+- 12-documentation-and-finding-help.md
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
