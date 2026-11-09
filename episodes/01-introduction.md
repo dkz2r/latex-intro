@@ -65,7 +65,7 @@ The TeXStudio interface is divided into several sections:
 5. The **Message Window**: This shows information about the results from the most recent attempt at
    compilation. Any errors encountered will be displayed here.
 
-![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.PNG){alt='An image of the TeXStudio interface, showing the locations of the main UI elements.}
+![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.PNG){alt='An image of the TeXStudio interface, showing the locations of the main UI elements.'}
 
 ## TeXworks
 
