@@ -65,7 +65,7 @@ The TeXStudio interface is divided into several sections:
 5. The **Message Window**: This shows information about the results from the most recent attempt at
    compilation. Any errors encountered will be displayed here.
 
-![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.PNG)
+![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.PNG){alt='An image of the TeXStudio interface, showing the locations of the main UI elements.}
 
 ## TeXworks
 
@@ -87,7 +87,7 @@ the rendered output. Next to the "Typeset" button is a drop-down menu that allow
 the typesetting engine you wish to use. For this workshop, we will use the default engine,
 PDFLaTeX.
 
-![TeXworks Interface](fig/01-introduction/TexWorksEditor.PNG)
+![TeXworks Interface](fig/01-introduction/TexWorksEditor.PNG){alt='An image of the TeXWorks editor, showing the locations of the main UI elements.'}
 
 :::
 
@@ -117,7 +117,7 @@ Now click the green "Typeset" button in the top left corner of the interface. Th
 the document and update the preview pane with the rendered output. You should see a PDF preview
 of the document with the text "Hello, LaTeX!".
 
-![TeXworks Preview Pane](fig/01-introduction/TexWorksEditor_preview-document.PNG)
+![TeXworks Preview Pane](fig/01-introduction/TexWorksEditor_preview-document.PNG){alt='The TeXStudio editor with the preview pane showing the results of our first document.'}
 
 :::
 
