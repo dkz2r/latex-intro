@@ -14,8 +14,8 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Demonstrate how to create a new LaTeX Document.
-- Become familiar with the TeXworks interface.
-- Compile a LaTeX document with the TeXworks editor.
+- Become familiar with the editor interface.
+- Compile a LaTeX document with the editor.
 - Compile a LaTeX document with the command line.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -49,29 +49,36 @@ as `main.tex`.
 ## TeXStudio
 
 The TeXStudio interface is divided into several sections:
-- The **Editor**: This is where you write your LaTeX code. It supports syntax highlighting and
-  basic code completion.
-- The **Preview Pane**: This shows the compiled output of your LaTeX code. This window will appear
-  whenever we compile the document.
-- The **Menu Bar**: This contains various options for managing your document, such as saving,
-  compiling, and printing. You can also access the preferences and settings from here.
-- The **Toolbar**: This contains buttons for common actions, such as saving, compiling, and
-  inserting common LaTeX commands.
-- The **Status Bar**: This shows information about the current document, such as the line and
-  column number, the current compiler, and any warnings or errors that may have occurred during
-  compilation.
+
+1. The **Editor**: This is where you write your LaTeX code. It supports syntax highlighting and
+   basic code completion.
+
+2. The **Preview Pane**: This shows the compiled output of your LaTeX code. This window will appear
+   whenever we compile the document.
+
+3. The **Menu Bar**: This contains various options for managing your document, such as saving,
+   compiling, and printing. You can also access the preferences and settings from here.
+
+4. The **Toolbar**: This contains buttons for common actions, such as saving, compiling, and
+   inserting common LaTeX commands.
+
+5. The **Message Window**: This shows information about the results from the most recent attempt at
+   compilation. Any errors encountered will be displayed here.
 
 ![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.PNG)
 
 ## TeXworks
 
 The TeXworks interface is divided into three main sections:
-- The **Editor**: This is where you write your LaTeX code. It supports syntax highlighting and
-  basic code completion.
-- The **Preview Pane**: This shows the compiled output of your LaTeX code. This window will appear
-  whenever we compile the document.
-- The **Menu Bar**: This contains various options for managing your document, such as saving,
-  compiling, and printing. You can also access the preferences and settings from here.
+
+1. The **Editor**: This is where you write your LaTeX code. It supports syntax highlighting and
+   basic code completion.
+
+2. The **Preview Pane**: This shows the compiled output of your LaTeX code. This window will appear
+   whenever we compile the document.
+
+3. The **Menu Bar**: This contains various options for managing your document, such as saving,
+   compiling, and printing. You can also access the preferences and settings from here.
 
 The overall interface is designed to be simple and intuitive, focusing on the essential features
 of a LaTeX editor. Note the large green triangle button in the top left corner of the interface.
@@ -98,13 +105,13 @@ Hello, \LaTeX!
 
 ::: tab
 
-## Compiling with TeXStudio
+## TeXStudio
 
 Now click the green double arrow icon on the toolbar (or press "F5" on your keyboard). This will
 compile the document and update the preview pane with the rendered output. You should see a PDF
 preview of the document with the text "Hello, LaTeX!".
 
-## Compiling with TeXworks
+## TeXworks
 
 Now click the green "Typeset" button in the top left corner of the interface. This will compile
 the document and update the preview pane with the rendered output. You should see a PDF preview
@@ -177,8 +184,8 @@ Output written on main.pdf (1 page, 21048 bytes).
 Transcript written on main.log.
 ```
 
-You can also use the compiler LuaLaTeX which is more powerful but might take a
-little bit longer to generate the pdf.
+You can also use the compiler LuaLaTeX which is more powerful but can take a
+little bit longer to generate pdfs.
 
 ```bash
 lualatex main.tex
@@ -237,12 +244,21 @@ We'll take a closer look at the log file in a later episode.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: NEED A NEW CHALLENGE
+## Challenge 1: The Two Green Arrows
+
+In this episode, we used the Double Green Arrow to make our document. Right next to it there is a
+Single Green Arrow. Hover your mouse over each one.
+
+- What does the tooltip say for each? What keyboard shortcuts work for each?
+- Why would both of these options be available?
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
+The Double Arrow is called "Build and View" whereas the Single Arrow is called "Compile Only".
+Sometimes we don't nessecarily want to view the document, but we want to check that it at least
+isn't broken. We can use the "Compile Only" option to ask LaTeX to
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -250,34 +266,109 @@ We'll take a closer look at the log file in a later episode.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: NEED A NEW CHALLENGE
+## Challenge 2: How Does TeXStudio Talk to Me?
 
-:::::::::::::::::::::::: soluti
+Compile your document again.
+Look at the Message Window at the bottom of the screen and click through the tabs to see the different information available.
+Then, remove the line `\begin{document}` and look at them again.
+
+1. What kinds of messages show up there?
+2. What happens differently when we delete the line? What additional information appears?
+
+:::::::::::::::::::::::: solution
 
 ## Answer
+
+When the document compiles entirely cleanly, you should get a message like:
+
+```output
+Process started: pdflatex.exe -synctex=1 -interaction=nonstopmode "example".tex
+
+Process exited normally
+```
+
+The other tabs should be entirely empty.
+
+When we delete the indicated line, our document can no longer correctly compile.
+Your message should in this case be something like:
+
+```output
+Process started: pdflatex.exe -synctex=1 -interaction=nonstopmode "example".tex
+
+Process exited with error(s)
+
+
+Error: Command failed with error code 1
+```
+
+In the "Log" tab, there should be additional information about specifically what the compiler noticed when trying to execute.
+
+The exact error message may depend on your version, but it should be something like:
+
+```
+example.tex: error: 3: Missing \begin{document}. H
+```
+
+Note that it tells you 4 pieces of information:
+- The file that encountered the issue
+- That it was an error (and not a warning or informational)
+- That it occured on line 3
+- A message with details about what exactly the issue was.
+
+LaTeX is a little notorious for error messages.
+We'll look at a few more different errors in later episodes.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 3: NEED A NEW CHALLENGE
+## Challenge 3: The Integrated PDF viewer
+
+You can tell TeXStudio to use whatever external PDF viewer you like in the program settings, but the integrated viewer does have one neat feature.
+Add a blank line after the "Hello \LaTeX", then below that write some text of your own (It's not important what).
+
+Your file should look like this:
+
+```
+\documentclass{article}
+
+\begin{document}
+	Hello, \LaTeX!
+
+	I am some additional text!
+\end{document}
+```
+
+Then use the "Build and View" Button (Double Green Arrows, or `F5`).
+
+With the preview window open, click on the "Hello \LaTeX" text.
+Then click on the text you added.
+
+- What happens in the preview window?
+
+In the preview window, right click on some text and select "Go to Source" on the menu that appears.
+
+- What happens in the editor window?
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
+When you move the cursor around in the editor window, the corresponding sections of text should be highlighted in the preview window.
+Likewise, when you use the "Go to Source" option in the pop-up menu in the preview window, it should highlight the text that generated it in the editor window.
+
+This might seem obvious at the moment with this small example document, but as you start to write larger documents, it can be a fast way of moving around your source code and an efficient way of fixing formatting issues.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- We can use the TeXworks editor to write and compile LaTeX documents.
-- The TeXworks interface is divided into three main sections: the editor, the preview pane, and the menu bar.
-- We can compile a LaTeX document by clicking the "Typeset" button in the TeXworks editor.
-- We can also compile a LaTeX document from the command line using the
-  `pdflatex` or `lualatex` command.
+- We can use an editor to write and compile LaTeX documents.
+- The interface is divided into three main sections: the editor, the preview pane, and the menu bar.
+- We can compile a LaTeX document by clicking the "Build and View" button in the TeXStudio editor (or "Typeset" in TeXworks).
+- We can also compile a LaTeX document from the command line using the `pdflatex` or `lualatex` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
