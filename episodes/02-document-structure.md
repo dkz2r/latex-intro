@@ -33,7 +33,7 @@ This is my first LaTeX document.
 \end{document}
 ```
 
-![Starting Document](fig/02-document-structure/document-getting-started.PNG)
+![Starting Document](fig/02-document-structure/document-getting-started.PNG){alt='A screenshot of the TeXStudio editor window with our current document.}
 
 ::: callout
 
@@ -87,13 +87,13 @@ notes on what you're learning, and to act as a reference for yourself in the fut
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here
-Hello World!
+  Hello World!
 
-This is my first LaTeX document.
+  This is my first LaTeX document.
 \end{document}
 ```
 
-![Document with Comments](fig/02-document-structure/document-comments.PNG)
+![Document with Comments](fig/02-document-structure/document-comments.PNG){alt='A screenshot of the TeXStudio editor window with our current document, now with commented out lines.}
 
 ::: callout
 
@@ -148,8 +148,9 @@ and so on.
 
 What about the `\` character?
 
-The `\` character is used to escape other characters in latex, so it's not possible to escape it
-in the same way. Instead, you can use `\textbackslash` to produce a backslash in your document.
+The `\` character is used to escape other characters in latex, so it's not possible to escape it in the same way.
+(In fact, `\\` is actually a specific command that has a particular purpose we'll see later!)
+Instead, you can use `\textbackslash` to produce a backslash in your document.
 
 :::
 
@@ -243,28 +244,32 @@ However, there is also a LaTeX command called `\par` which might be of help for 
 Consider the LaTeX code below. Can you already guess which of these options prints *Hello World!* and *This is my first LaTeX document.* in two separate lines?
 (Feel to make a main.tex file in a new project folder to test this out!)
 
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
+Option A:
 
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-% Option A
+```latex
 Hello World!
 
 This is my first LaTeX document.
+```
 
-% Option B
+Option B:
+
+```latex
 Hello World! This is my first LaTeX document.
+```
 
-% Option C
+Option C:
+
+```latex
 Hello World! \par This is my first LaTeX document.
+```
 
-% Option D
+Option D:
+
+```latex
 Hello World! \par
 
 This is my first LaTeX document.
-\end{document}
 ```
 
 :::::::::::::::::::::::: solution
@@ -272,37 +277,13 @@ This is my first LaTeX document.
 ## Answer
 
 The command `\par` initiates a new paragraph for us even if we write text in just one line (see Option C).
-Solely, Option B out of all four options does not create the intended new paragraph as neither an empty line nor `\par` is used.
-Moreover, Option D gives us the same result as Option A and Option C, although we used both, `\par` and an empty line.
+Option B is the only one out of all four options that does not create the intended new paragraph, as neither an empty line nor `\par` is used.
 
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+You might have expected Option D to add two blank lines, but interestingly it gives us the same result as Option A and Option C.
+This is because `\par` just tells LaTeX "Start a new paragraph here".
+Consecutive whitespace in a LaTeX document is always collapsed down to a line break, but since we already have one as a result of the `\par` command, LaTeX ignores this.
 
-::::::::::::::::::::::::::::::::::::: challenge
-
-
-## Challenge 4: One line of code with paragraphs and special characters.
-
-How would I display the following text in a LaTeX document but using just one line of code?
-
-```
-Hello World! This is my first LaTeX document.
-Now, I know how to initiate paragraphs without an empty line.
-Even more, I can write # and ^ correctly using LaTeX.
-```
-
-
-:::::::::::::::::::::::: solution
-
-## Answer
-
-We need to use `\par` to initiate a new paragraph without using a new line of code.
-Moreover, we need to use escapes before each of the special characters. The following LaTeX code will display
-the text correctly:
-
-```latex
-Hello World! This is my first LaTeX document. \par Now, I know how to initiate paragraphs without an empty line. \par Even more, I can write \# and \^{} correctly using LaTeX.
-```
+(There are ways to change the space between either specific lines or every line in a document. We will explore these later!)
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -317,22 +298,3 @@ Hello World! This is my first LaTeX document. \par Now, I know how to initiate p
     circle in the text editor.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-::: spoiler
-
-After this episode, here is what our LaTeX document looks like:
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-Hello World!
-
-This is my first LaTeX document.
-\end{document}
-```
-
-:::
