@@ -299,7 +299,7 @@ $x = \frac{-b \pm \squareroot{b^2 - 4ac}}{2a}$
 
 ::: hint
 
-The error suggests there is something wrong with line 8.
+The error suggests there is something wrong with line 8, which is the line with the equation on it.
 
 :::
 
