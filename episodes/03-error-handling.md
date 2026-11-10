@@ -306,6 +306,8 @@ The error suggests there is something wrong with line 8.
 
 :::::::::::::::::::::::: solution
 
+In TeXStudio, depending on your version, the incorrect command my well be highlighted as soon as you enter it into the editor.
+
 The full error message is:
 
 ```
@@ -323,11 +325,83 @@ commands yet, but the correct command for the square root symbol is `\sqrt`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+# Challenge 2: Learning Error Messages
+
+Try compiling the following document in your editor:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+This sentence has some \textbf{very important text.
+
+And here is a second paragraph.
+
+\end{document}
+```
+
+What kind of error message do you get? What does it mean? How would you resolve this?
+
+::: hint
+
+We haven't covered commands yet, but just like every `\begin{}` needs an `\end{}`, we need to have the correct number of opening and closing curly braces.
+
+:::
+
+:::::::::::::::::::::::: solution
+
+The command `\textbf` has an opening curly brace, but we forgot to add a closing curly brace!
+The error message is a little cryptic at first: "File ended while scanning use of \textbf ."
+What LaTeX is saying here is that it read the rest of the file, and got to the very end without finding a closing brace to match this one.
+
+Error messages today are much better than they used to be, but you can't always count on them being as straightforward as the example we had at the stat.
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+# Challenge 3: Silent Errors
+
+Try out this code:
+
+``` latex
+\documentclass{article}
+
+\begin{document}
+
+	This sentence has some \textbf{very important text}.
+
+	This is /textbf{also supposed to be bold}.
+
+\end{document}
+```
+
+What happens?
+
+:::::::::::::::::::::::: solution
+
+In this case, there is no error and all of this is valid LaTeX code.
+However if we look at the output, we can see that the second line actually just prints the text "/textbfalso supposed to be bold".
+This is because /textbf is not only not a command, but entirely valid.
+As a result, the only way to catch some errors like this is to manually review your document and ensure it comes out looking the way you intended.
+
+BONUS: Why don't the curly braces appear in the output?
+In LaTeX, curly braces not preceeded by a command
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 
-# Challenge 2: Fix the errors
+# Challenge 4: Fix the errors
 
 The following document contains several errors. Can you identify and fix them?
 
