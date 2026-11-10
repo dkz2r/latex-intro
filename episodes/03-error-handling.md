@@ -159,14 +159,6 @@ This message tells us a few things:
 Of course, we know what the error was, so we can just fix it by changing `\documnetclass` back to
 `\documentclass`.
 
-::: callout
-
-In general, the first error message in the list is the most useful one to look at. The other error
-messages are often just a result of the first error cascading down the document, so fixing the first
-one will often fix the rest of them too.
-
-:::
-
 ## Common Errors
 
 Let's take a look at some common errors you might encounter when working with LaTeX.
