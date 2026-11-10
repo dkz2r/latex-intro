@@ -48,7 +48,7 @@ This is my first LaTeX document.
 
 ### Errors in the TeXStudio Editor
 
-![Error in the LaTeX document](fig/03-error-handling/document-errors-texstudio.png){alt='The TeXStudio Editor showing a significant error in our document.}
+![Error in the LaTeX document](fig/03-error-handling/document-errors-texstudio.png){alt='The TeXStudio Editor showing a significant error in our document.'}
 
 Several lines of our code are highlighted in red, and the message box at the bottom of the screen has several entries in it now.
 
