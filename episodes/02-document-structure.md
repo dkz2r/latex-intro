@@ -33,7 +33,7 @@ This is my first LaTeX document.
 \end{document}
 ```
 
-![Starting Document](fig/02-document-structure/document-getting-started.PNG){alt='A screenshot of the TeXStudio editor window with our current document.}
+![Starting Document](fig/02-document-structure/document-getting-started.PNG){alt='A screenshot of the TeXStudio editor window with our current document.'}
 
 ::: callout
 
@@ -93,7 +93,7 @@ notes on what you're learning, and to act as a reference for yourself in the fut
 \end{document}
 ```
 
-![Document with Comments](fig/02-document-structure/document-comments.PNG){alt='A screenshot of the TeXStudio editor window with our current document, now with commented out lines.}
+![Document with Comments](fig/02-document-structure/document-comments.PNG){alt='A screenshot of the TeXStudio editor window with our current document, now with commented out lines.'}
 
 ::: callout
 

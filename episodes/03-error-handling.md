@@ -46,9 +46,17 @@ This is my first LaTeX document.
 
 ::: tab
 
+### Errors in the TeXStudio Editor
+
+![Error in the LaTeX document](fig/03-error-handling/document-errors-texstudio.png){alt='The TeXStudio Editor showing a significant error in our document.}
+
+Several lines of our code are highlighted in red, and the message box at the bottom of the screen has several entries in it now.
+
+The line numbers in the error messages relate to exactly the highlighted lines in the editor, and clicking on each row moves the curosor in the editor to the corresponding line.
+
 ### Errors in the TeXworks Editor
 
-![Error in the LaTeX document](fig/03-error-handling/document-errors.png){alt='Error in the LaTeX document.'}
+![Error in the LaTeX document](fig/03-error-handling/document-errors-texworks.png){alt='The TeXWorks Editor showing a significant error in our document..'}
 
 The greens triangle we clicked on is now a red octagon, indicating that there is an error. There's
 also now a second tab that we can see in the editor pane now, called "Errors, warnings, badboxes".
