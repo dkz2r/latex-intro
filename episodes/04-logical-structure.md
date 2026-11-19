@@ -29,30 +29,21 @@ LaTeX will handle all of the numbering, formatting, vertical spacing, fonts, and
 keep these elements consistent throughout your document. Let's add sections to our document.
 
 ```latex
-% This command tells LaTeX what kind of document we are creating (article).
 \documentclass{article}
 
+\begin{document}
 
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
+	\section{Introduction}
+	This is a collection of information about my favorite animals!
 
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
+	\section{Habitats}
+	Animals live in a variety of natural habitats.
 
-Hello World!
+	\subsection{Ocean}
+	Mostly things with fins.
 
-This is my first LaTeX document.
-
-I can add content to my first section!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a subsection inside my first section.
-
-\section{Second Section}
-
-And this text will go into another section.
+	\subsection{Arctic}
+	Where it gets cold.
 
 \end{document}
 ```
@@ -88,197 +79,169 @@ this by adding the `\tableofcontents` command to our document body. This will cr
 contents at the location where the command is placed.
 
 ```latex
-% This command tells LaTeX what kind of document we are creating (article).
 \documentclass{article}
 
+\begin{document}
 
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
+	\tableofcontents % The table of contents command has to go inside of the document environment
 
-\tableofcontents
+	\section{Introduction}
+	This is a collection of information about my favorite animals!
 
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
+	\section{Habitats}
+	Animals live in a variety of natural habitats.
 
-Hello World!
+	\subsection{Ocean}
+	Mostly things with fins.
 
-This is my first LaTeX document.
-
-I can add content to my first section!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a subsection inside my first section.
-
-\section{Second Section}
-
-And this text will go into another section.
+	\subsection{Arctic}
+	Where it gets cold.
 
 \end{document}
 ```
 
 ![](fig/03-logical-structure/document-with-toc.png){alt='Our document with a table of contents.'}
 
-## Lists
+## Document Classes
 
-In LaTeX, as in markdown, there are two types of lists: ordered and unordered. They are both
-defined with `\begin{...}` and `\end{...}` commands, as we saw with the document body. Let's add
-an ordered list to our document.
+We've been including the `\documentclass{article}` at the top of our file each time, but what does this actually do?
+A document class sets up the general layout of the document, including (but not limited to):
 
-We'll replace our "Second Section" with one for "Lists" and add an ordered list:
+- design (margins, fonts, spacing, etc)
+- availability of chapters
+- title page layout
 
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
+Document classes can also add new commands and environments to the document.
 
+### Options for the Article Document Class
 
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
+You might have noticed when we start typing `\documentclass` at the top of our file, the autocomplete has two options:
 
-\tableofcontents
+![The autocomplete options for `\documentclass`](fig/04-logical-structure/documentclass-typehint.png){alt='A screenshot of the typehint that appears for document class'}
 
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
-
-Hello World!
-
-This is my first LaTeX document.
-
-I can add content to my first section!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a subsection inside my first section.
-
-\section{Lists}
-
-There are two types of lists: ordered and unordered.
-
-\subsection{Ordered}
-
-Ordered lists have a number or letter associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{enumerate}
-
-\end{document}
-```
-
-When you compile this document, you should see something like this in the preview pane:
-
-![](fig/03-logical-structure/enumerated-list.PNG){alt='Our document with an enumerated list.'}
-
-::: callout
-
-Note that the `\item` commands do not need to be enclosed in braces. These commands do not take
-any arguments, so they can be used as standalone commands. The text that follows the `\item`
-command will be treated as the content of the list item. However, you are able to specify your own
-bullet point symbols with `\item[]` manually. For instance, if you want a list with small letters in brackets
-you can use the following LaTeX code:
+We've just been using the first version, where we say "We want to use the article class", but the section version has a bit in square brackets that says "keyvals".
+This is where we can specify basic options that apply to the entire document.
+Let's update our document to use a slightly larger font size:
 
 ```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
+\documentclass[12pt]{article} % use the article class, and set the font to 12pt
 
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-
-% List with custom bullet point symbols
-\begin{itemize}
-  \item[(a)] Item 1
-  \item[(b)] Item 2
-  \item[(c)] Item 3
-\end{itemize}
-
-\end{document}
-```
-
-:::
-
-::: callout
-
-It's also possible to create a list with roman numerals automatically with the `enumitem` package:
-```latex
-\documentclass{article}
-\usepackage{enumitem} %<-- package for lists https://texdoc.org/serve/enumitem/
-% \setlist{label=\Roman*} %<-- globally defining the enumeration system
 \begin{document}
-\begin{enumerate}[
-  label=\emph{\roman*}, %<-- change labeling system locally (or \Roman)
-  leftmargin=5cm, %<-- change indent on the left
-]
-  \item First
-  \item Second
-  \item Third
-  \item Fourth
-\end{enumerate}
+
+	\tableofcontents % The table of contents command has to go inside of the document environment
+
+	\section{Introduction}
+	This is a collection of information about my favorite animals!
+
+	\section{Habitats}
+	Animals live in a variety of natural habitats.
+
+	\subsection{Ocean}
+	Mostly things with fins.
+
+	\subsection{Arctic}
+	Where it gets cold.
+
 \end{document}
 ```
+
+Keep an eye on the preview when you hit "Build and View" - you should see the entire document re-render in a larger font.
+
+We can specify additional options here by seperating them with a comma. Let's set the paper size:
+
+```latex
+\documentclass[12pt, a4paper]{article} % use the article class, and set the font to 12pt
+
+\begin{document}
+
+	\tableofcontents % The table of contents command has to go inside of the document environment
+
+	\section{Introduction}
+	This is a collection of information about my favorite animals!
+
+	\section{Habitats}
+	Animals live in a variety of natural habitats.
+
+	\subsection{Ocean}
+	Mostly things with fins.
+
+	\subsection{Arctic}
+	Where it gets cold.
+
+\end{document}
+```
+
+::: callout
+
+When setting up the LaTeX distribution, there is an option to set the default paper size to either A4 or Letter.
+Since you never know who is going to be compiling your document, if you want to ensure that you get the same output no matter who opens it, it's a good idea to set at least the paper size here.
 
 :::
 
-Adding an unordered list is just as easy. We can use the exact same syntax, but replace the
-`enumerate` environment with `itemize`.
+### What does setting the Document Class do?
+
+The document class also dictates what commands are available in the document.
+Let's try setting our documentclass to "letter" and compile it to see what happens:
 
 ```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
+\documentclass[12pt, a4paper]{letter} % use the article class, and set the font to 12pt
 
+\begin{document}
 
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
+	\tableofcontents % The table of contents command has to go inside of the document environment
 
-\tableofcontents
+	\section{Introduction}
+	This is a collection of information about my favorite animals!
 
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
+	\section{Habitats}
+	Animals live in a variety of natural habitats.
 
-Hello World!
+	\subsection{Ocean}
+	Mostly things with fins.
 
-This is my first LaTeX document.
-
-I can add content to my first section!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a subsection inside my first section.
-
-\section{Lists}
-
-There are two types of lists: ordered and unordered.
-
-\subsection{Ordered}
-
-Ordered lists do not have numbers or letters associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{enumerate}
-
-\subsection{Unordered}
-
-Unordered lists are just a series of items preceded by a marker.
-
-\begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{itemize}
+	\subsection{Arctic}
+	Where it gets cold.
 
 \end{document}
 ```
 
-![](fig/03-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'}
+Errors! You should have gotten an "Undefined Control Sequence" error for each `\tableofcontents`, `\section` and `\subsection` in your document.
+This is because these commands aren't present in the letter document class.
 
+We can modify our document to make it into a letter:
+
+```latex
+\documentclass{letter}
+
+\address{Musterstraße 3 \\ 12543 Aachen}
+\signature{Max Mustermann}
+
+\begin{document}
+
+	\begin{letter}{Prof. Joe Smith \\ Department of Zoology}
+
+	\opening{Dear Sir or Madam,}
+	This is a collection of information about my favorite animals!
+
+	Animals live in a variety of natural habitats.
+
+	\closing{Sincerely,}
+
+	\end{letter}
+
+\end{document}
+```
+
+So notice we now have a nested `\begin{letter}` environment.
+We also have several commands like `\address`, `\signature`, `\opening` and `\closing`.
+These commands are not available in the "article" class.
+
+### Other Document Classes
+
+In addition to "article" and "letter", base LaTeX also contains classes for "slides", "report" and "book".
+These classes have been around for quite a long time, and are to modern eyes a little basic and lacking in features.
+There are also the "KOMA scripts" - a collection of document classes that are more modern and feature rich than the basic classes.
+We won't cover these here, but you can find [documentation for these online](https://ctan.org/pkg/koma-script).
 
 ## Challenges
 
@@ -286,43 +249,10 @@ Unordered lists are just a series of items preceded by a marker.
 
 ## Challenge 1: What needs to change?
 
-We have the following in our LaTeX document:
-
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\begin{enumerate}
-  \item Banana Bread
-  \item Carrot Muffins
-  \item Apple Cake
-\end{enumerate}
-
-\end{document}
-```
-
-How would we modify this to change this ordered list to an unordered list?
-
 :::::::::::::::::::::::: solution
 
 ## Answer
 
-You would need to change the `enumerate` environment to `itemize`:
-
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\begin{itemize}
-  \item Banana Bread
-  \item Carrot Muffins
-  \item Apple Cake
-\end{itemize}
-
-\end{document}
-```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -331,39 +261,10 @@ You would need to change the `enumerate` environment to `itemize`:
 
 ## Challenge 2: Can you do it?
 
-We would like to have the following appear in our LaTeX document:
-
-- Apples
-  1. Gala
-  2. Fuji
-  3. Granny Smith
-- Bananas
-- Oranges
-
-How would you write this in LaTeX?
-
 :::::::::::::::::::::::: solution
 
 ## Answer
 
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\begin{itemize}
-  \item Apples
-  \begin{enumerate}
-    \item Gala
-    \item Fuji
-    \item Granny Smith
-  \end{enumerate}
-  \item Bananas
-  \item Oranges
-\end{itemize}
-
-\end{document}
-```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -373,33 +274,10 @@ How would you write this in LaTeX?
 
 ## Challenge 3: Enumerate your list manually
 
-We would like to have the following appear in our LaTeX document:
-
-
-1. Gala
-2. Fuji
-3. Granny Smith
-
-
-How would you write this in LaTeX **without** using `enumerate` but `itemize` with `\item[]`?
-
 :::::::::::::::::::::::: solution
 
 ## Answer
 
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\begin{itemize}
-  \item[1.] Gala
-  \item[2.] Fuji
-  \item[3.] Granny Smith
-\end{itemize}
-
-\end{document}
-```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -408,7 +286,7 @@ How would you write this in LaTeX **without** using `enumerate` but `itemize` wi
 
 - LaTeX documents are structured using section commands.
 - There are many different section commands in LaTeX, including `\subsubsection{...}`, `\paragraph{...}`, `\chapter{...}`, and more.
-- Lists in LaTeX are created using the `enumerate` and `itemize` environments.
+-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
