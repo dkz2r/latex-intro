@@ -1,5 +1,5 @@
 ---
-title: 'The Structure of a Document'
+title: 'Lists'
 teaching: 15
 exercises: 10
 ---
@@ -113,7 +113,7 @@ It functions the same way as the others, but just has a slightly different forma
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: What needs to change?
+## Challenge: What needs to change?
 
 We have the following in our LaTeX document:
 
@@ -158,7 +158,43 @@ You would need to change the `enumerate` environment to `itemize`:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: Can you do it?
+## Challenge: What's wrong here?
+
+We have the following in our LaTeX document:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\enumerate{list}
+\item{"Apples"}
+\item{"Bananas"}
+\item{"Carrots"}
+\enumerate{list}
+
+\end{document}
+```
+
+How would we modify this to change this ordered list to an unordered list?
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+There's two issues here:
+
+1. There is no `enumerate` command (the thing that starts with a slash). We need to use an `enumerate` environment instead, which starts with `\begin{enumerate}` and ends with `\end{enumerate}`.
+2. We don't need to surround the items with parentheses or put them in quotes.
+
+That there isn't any indentation is not actually an error - in LaTeX (almost!) all whitespace is ignored.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge: Can you do it?
 
 We would like to have the following appear in our LaTeX document:
 
@@ -200,7 +236,7 @@ How would you write this in LaTeX?
 ::::::::::::::::::::::::::::::::::::: challenge
 
 
-## Challenge 3: Enumerate your list manually
+## Challenge: Enumerate your list manually
 
 We would like to have the following appear in our LaTeX document:
 
@@ -235,6 +271,8 @@ How would you write this in LaTeX **without** using `enumerate` but `itemize` wi
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
--
+- Lists in LaTeX can be created using `itemize` for unordered lists and `enumerate` for ordered lists.
+- You can add elements to the lists with the `\item` command.
+- Although not strictly necessary, you can manually enumerate items using `\item[]` with a custom label.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
