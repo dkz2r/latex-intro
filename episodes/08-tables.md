@@ -81,9 +81,11 @@ LaTeX, but it makes the code much easier to read.
 :::
 
 ```latex
-\section{Tables}
+\documentclass{article}
 
-\kw{Tables} are defined using the \cmd{tabular} environment.
+\begin{document}
+
+\section{Tables}
 
 \begin{tabular}{lll}
   Fruit  & Quantity & Price \\
@@ -91,6 +93,8 @@ LaTeX, but it makes the code much easier to read.
   Banana & 6        & 2.00  \\
   Orange & 4        & 1.20  \\
 \end{tabular}
+
+\end{document}
 ```
 
 This will create a table with three columns, all left-aligned. The values of each row are separated
@@ -210,15 +214,6 @@ arguments:
 
 ```latex
 \subsection{Merging Cells}
-
-Merge cells horizontally using the \cmd{\textbackslash multicolumn} command. This command takes
-three arguments:
-
-\begin{itemize}
-  \item The number of cells which should be merged
-  \item The alignment of the merged cell (l, c, or r)
-  \item The contents of the merged cell
-\end{itemize}
 
 \begin{tabular}{*{3}{l}}
   \toprule

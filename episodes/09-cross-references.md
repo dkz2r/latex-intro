@@ -30,6 +30,9 @@ To have LaTex remember a specific spot in your document, you have to use the `\l
 mark it, and the `\ref{}` command to refer to it. For example:
 
 ```latex
+\documentclass{article}
+
+
 \section{Cross References}
 \label{sec:cross-references}
 
