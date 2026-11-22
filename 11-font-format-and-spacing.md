@@ -145,20 +145,6 @@ To force a new line, we can use the `\\` command.
 
 ## Adding Explicit Space
 
-We can insert a thin space (about half the normal thickness) use the `\,` command.
-
-::: callout
-
-In math mode, there are also other commands:
-
-- `\.` for a "dot" space
-- `\:` for a "colon" space
-- `\;` for a "thick" space
-- `\!` for a "negative" space
-- `\,` for a "thin" space
-
-:::
-
 Very rarely, for example when creating a title page, you might want to add explicit horizontal or
 vertical space. We can do this using the `\hspace` and `\vspace` commands:
 

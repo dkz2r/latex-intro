@@ -46,9 +46,17 @@ This is my first LaTeX document.
 
 ::: tab
 
+### Errors in the TeXStudio Editor
+
+![Error in the LaTeX document](fig/03-error-handling/document-errors-texstudio.png){alt='The TeXStudio Editor showing a significant error in our document.'}
+
+Several lines of our code are highlighted in red, and the message box at the bottom of the screen has several entries in it now.
+
+The line numbers in the error messages relate to exactly the highlighted lines in the editor, and clicking on each row moves the curosor in the editor to the corresponding line.
+
 ### Errors in the TeXworks Editor
 
-![Error in the LaTeX document](fig/03-error-handling/document-errors.png){alt='Error in the LaTeX document.'}
+![Error in the LaTeX document](fig/03-error-handling/document-errors-texworks.png){alt='The TeXWorks Editor showing a significant error in our document..'}
 
 The greens triangle we clicked on is now a red octagon, indicating that there is an error. There's
 also now a second tab that we can see in the editor pane now, called "Errors, warnings, badboxes".
@@ -150,14 +158,6 @@ This message tells us a few things:
 
 Of course, we know what the error was, so we can just fix it by changing `\documnetclass` back to
 `\documentclass`.
-
-::: callout
-
-In general, the first error message in the list is the most useful one to look at. The other error
-messages are often just a result of the first error cascading down the document, so fixing the first
-one will often fix the rest of them too.
-
-:::
 
 ## Common Errors
 
@@ -299,12 +299,14 @@ $x = \frac{-b \pm \squareroot{b^2 - 4ac}}{2a}$
 
 ::: hint
 
-The error suggests there is something wrong with line 8.
+The error suggests there is something wrong with line 8, which is the line with the equation on it.
 
 :::
 
 
 :::::::::::::::::::::::: solution
+
+In TeXStudio, depending on your version, the incorrect command my well be highlighted as soon as you enter it into the editor.
 
 The full error message is:
 
@@ -323,11 +325,83 @@ commands yet, but the correct command for the square root symbol is `\sqrt`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+# Challenge 2: Learning Error Messages
+
+Try compiling the following document in your editor:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+This sentence has some \textbf{very important text.
+
+And here is a second paragraph.
+
+\end{document}
+```
+
+What kind of error message do you get? What does it mean? How would you resolve this?
+
+::: hint
+
+We haven't covered commands yet, but just like every `\begin{}` needs an `\end{}`, we need to have the correct number of opening and closing curly braces.
+
+:::
+
+:::::::::::::::::::::::: solution
+
+The command `\textbf` has an opening curly brace, but we forgot to add a closing curly brace!
+The error message is a little cryptic at first: "File ended while scanning use of \textbf ."
+What LaTeX is saying here is that it read the rest of the file, and got to the very end without finding a closing brace to match this one.
+
+Error messages today are much better than they used to be, but you can't always count on them being as straightforward as the example we had at the stat.
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+# Challenge 3: Silent Errors
+
+Try out this code:
+
+``` latex
+\documentclass{article}
+
+\begin{document}
+
+	This sentence has some \textbf{very important text}.
+
+	This is /textbf{also supposed to be bold}.
+
+\end{document}
+```
+
+What happens?
+
+:::::::::::::::::::::::: solution
+
+In this case, there is no error and all of this is valid LaTeX code.
+However if we look at the output, we can see that the second line actually just prints the text "/textbfalso supposed to be bold".
+This is because /textbf is not only not a command, but entirely valid.
+As a result, the only way to catch some errors like this is to manually review your document and ensure it comes out looking the way you intended.
+
+BONUS: Why don't the curly braces appear in the output?
+In LaTeX, curly braces not preceeded by a command
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 
-# Challenge 2: Fix the errors
+# Challenge 4: Fix the errors
 
 The following document contains several errors. Can you identify and fix them?
 

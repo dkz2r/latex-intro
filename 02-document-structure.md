@@ -8,6 +8,7 @@ exercises: 10
 
 - What is the basic structure of a LaTeX document?
 - How do I see what my LaTeX document looks like when it's rendered?
+- How can I change the appearance of text in my document?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -16,6 +17,7 @@ exercises: 10
 - Become familiar with the basic structure of a LaTeX document.
 - Use TeXworks to render a LaTeX document into a PDF.
 - Identify how to add special characters to a LaTeX document.
+- Add bold and italic text formatting in the document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -33,7 +35,7 @@ This is my first LaTeX document.
 \end{document}
 ```
 
-![Starting Document](fig/02-document-structure/document-getting-started.PNG)
+![Starting Document](fig/02-document-structure/document-getting-started.PNG){alt='A screenshot of the TeXStudio editor window with our current document.'}
 
 ::: callout
 
@@ -87,13 +89,13 @@ notes on what you're learning, and to act as a reference for yourself in the fut
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here
-Hello World!
+  Hello World!
 
-This is my first LaTeX document.
+  This is my first LaTeX document.
 \end{document}
 ```
 
-![Document with Comments](fig/02-document-structure/document-comments.PNG)
+![Document with Comments](fig/02-document-structure/document-comments.PNG){alt='A screenshot of the TeXStudio editor window with our current document, now with commented out lines.'}
 
 ::: callout
 
@@ -110,7 +112,7 @@ to your document as you see fit.
 
 As with our example from the previous episode, we can render our document by clicking on the
 large green "Typeset" button in TeXworks, or by running the command `pdflatex main.tex` in
-our terminal/consoloe.
+our terminal/console.
 
 ::: callout
 
@@ -140,16 +142,34 @@ much less common in text, but you can use them by "escaping" them with a backsla
 - `\%` produces `%`
 - `\&` produces `&`
 - `\#` produces `#`
-- `\^` produces `^`
 
 and so on.
 
+We can't simply add these special characters directly into our document, as LaTeX will interpret them as commands or have other special meanings.
+Whenever we want to use them, we have to escape them with a backslash.
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+  Hello World!
+
+  This is my first LaTeX document.
+
+  This document is 100\% complete.
+\end{document}
+```
+
 ::: spoiler
 
-What about the `\` character?
+What about the `\` character itself?
 
-The `\` character is used to escape other characters in latex, so it's not possible to escape it
-in the same way. Instead, you can use `\textbackslash` to produce a backslash in your document.
+The `\` character is used to escape other characters in latex, so it's not possible to escape it in the same way.
+(In fact, `\\` is actually a specific command that has a particular purpose we'll see later!)
+Instead, you can use `\textbackslash` to produce a backslash in your document.
 
 :::
 
@@ -165,25 +185,67 @@ The following LaTeX code gives you an example:
 
 \begin{document}
 
-Here, the letter a is conflated with \^{} by typing \^ a.
+Without braces, LaTeX reads \textbackslash\^ a as one accent on a: \^ a.
 
-To prevent that, type \^{} a.
+To prevent that, type \^{} a. The braces tell LaTeX that the accent applies only to the character immediately following them.
 
 \end{document}
 ```
 
 :::
 
+## Basic Text Formatting
+
+We've introduced a few commands so far, like `\documentclass` `\begin` and `\end` but there are many more commands we can use!
+They all have a similar kind of structure: a backslash followed by the command name, and sometimes followed by arguments enclosed in curly braces.
+
+Let's start by modifying our document to include some basic text formatting commands.
+The two commands we will use are `\textbf` for bold text and `\textit` for italic text.
+
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+  \textbf{Hello World!}
+
+  This is my first \textit{LaTeX document.}
+
+  This document is 100\% complete.
+\end{document}
+```
+
+We can combine these commands by nesting them one inside the other, to create text that is both bold and italic.
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+  \textbf{Hello World!}
+
+  This is my first \textit{LaTeX document.}
+
+  This document is \textbf{\textit{100\% complete.}}
+\end{document}
+```
+
+In this case, it doesn't matter in which order we nest the `\textbf` and `\textit` commands; the text will be both bold and italic.
 
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: What's wrong with this document?
+## Challenge: What's wrong with this document?
 
 There is an error in the following LaTeX document. Can you find it?
 
-(Feel to make a new .tex file in a new project folder to test this out!)
+(Feel free to make a new .tex file in a new project folder to test this out!)
 
 ```latex
 \documentclass{article}
@@ -212,7 +274,7 @@ document is missing the `\begin{document}` command.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: Displaying Special characters.
+## Challenge: Displaying Special characters.
 
 How would I display the following text in a LaTeX document?
 
@@ -236,35 +298,60 @@ the text correctly:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 3: Paragraphs with `\par`.
+## Challenge: Text Formatting
+
+To make underlined text, we use a command called "underline".
+Add the following sentence to your LaTeX document:
+
+"This **sentence** contains text that is *italic* and *__underlined__*."
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+
+```latex
+This \textbf{sentence} contains text that is \textit{italic} and \underline{underlined}.
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge: Paragraphs with `\par`.
 
 In the section about Paragraphs from above we learned that empty lines are important to create paragraphs.
 However, there is also a LaTeX command called `\par` which might be of help for us.
 Consider the LaTeX code below. Can you already guess which of these options prints *Hello World!* and *This is my first LaTeX document.* in two separate lines?
-(Feel to make a main.tex file in a new project folder to test this out!)
+(Feel free to make a main.tex file in a new project folder to test this out!)
+
+Option A:
 
 ```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-% Option A
 Hello World!
 
 This is my first LaTeX document.
+```
 
-% Option B
+Option B:
+
+```latex
 Hello World! This is my first LaTeX document.
+```
 
-% Option C
+Option C:
+
+```latex
 Hello World! \par This is my first LaTeX document.
+```
 
-% Option D
+Option D:
+
+```latex
 Hello World! \par
 
 This is my first LaTeX document.
-\end{document}
 ```
 
 :::::::::::::::::::::::: solution
@@ -272,37 +359,13 @@ This is my first LaTeX document.
 ## Answer
 
 The command `\par` initiates a new paragraph for us even if we write text in just one line (see Option C).
-Solely, Option B out of all four options does not create the intended new paragraph as neither an empty line nor `\par` is used.
-Moreover, Option D gives us the same result as Option A and Option C, although we used both, `\par` and an empty line.
+Option B is the only one out of all four options that does not create the intended new paragraph, as neither an empty line nor `\par` is used.
 
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+You might have expected Option D to add two blank lines, but interestingly it gives us the same result as Option A and Option C.
+This is because `\par` just tells LaTeX "Start a new paragraph here".
+Consecutive whitespace in a LaTeX document is always collapsed down to a line break, but since we already have one as a result of the `\par` command, LaTeX ignores this.
 
-::::::::::::::::::::::::::::::::::::: challenge
-
-
-## Challenge 4: One line of code with paragraphs and special characters.
-
-How would I display the following text in a LaTeX document but using just one line of code?
-
-```
-Hello World! This is my first LaTeX document.
-Now, I know how to initiate paragraphs without an empty line.
-Even more, I can write # and ^ correctly using LaTeX.
-```
-
-
-:::::::::::::::::::::::: solution
-
-## Answer
-
-We need to use `\par` to initiate a new paragraph without using a new line of code.
-Moreover, we need to use escapes before each of the special characters. The following LaTeX code will display
-the text correctly:
-
-```latex
-Hello World! This is my first LaTeX document. \par Now, I know how to initiate paragraphs without an empty line. \par Even more, I can write \# and \^{} correctly using LaTeX.
-```
+(There are ways to change the space between either specific lines or every line in a document. We will explore these later!)
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -310,6 +373,7 @@ Hello World! This is my first LaTeX document. \par Now, I know how to initiate p
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
+- We can use the commands `\textbf{}`, `\textit{}`, and `\underline{}` to format text as bold, italic, or underlined, respectively.
 - The `%` character is used to add comments to a LaTeX document.
 - LaTeX documents are a mixture of text and commands.
 - Commands start with a backslash `\` and sometimes have arguments in curly braces `{}`.
@@ -317,22 +381,3 @@ Hello World! This is my first LaTeX document. \par Now, I know how to initiate p
     circle in the text editor.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-::: spoiler
-
-After this episode, here is what our LaTeX document looks like:
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-Hello World!
-
-This is my first LaTeX document.
-\end{document}
-```
-
-:::

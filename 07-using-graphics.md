@@ -66,12 +66,17 @@ Now that we have our image, we can include it in our document using the `\includ
 command:
 
 ```latex
-\section{Graphics}
+\documentclass{article}
 
-We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
-\cmd{includegraphics} command.
+\usepackage{graphicx}
+
+\begin{document}
+
+My Amazing Image:
 
 \includegraphics{my-awesome-image}
+
+\end{document}
 ```
 
 Your document should now look like this:
@@ -97,22 +102,31 @@ like we did earlier with the `geometry` package. For example, we can specify the
 image:
 
 ```latex
-\subsection{Small Image}
+\documentclass{article}
 
-We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
+\usepackage{graphicx}
+
+\begin{document}
+
+My Amazing Image:
+
+\includegraphics{my-awesome-image}
+
+\subsection{Image Options}
+
+\begin{itemize}
+  \item height
+  \item width
+  \item scale
+  \item angle
+\end{itemize}
+
+A smaller image:
 
 \includegraphics[height=2cm]{my-awesome-image}
 
-Other possible options include:
+\end{document}
 
-\begin{itemize}
-  \item width: the width of the image
-  \item scale: the scaling factor of the image
-  \item angle: the angle of rotation of the image
-  \item clip: whether to clip the image to its bounding box
-  \item trim: trim the image by a specified amount
-  \item draft: display a box instead of the image
-\end{itemize}
 ```
 
 ![](fig/06-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
@@ -138,9 +152,6 @@ placing the `\includegraphics` command inside of a `\begin{center}` and `\end{ce
 ```latex
 \subsection{Centered Image}
 
-By placing the \cmd{includegraphics} command inside a center environment, we can center the
-image on the page.
-
 \begin{center}
   \includegraphics[height=2cm]{my-awesome-image}
 \end{center}
@@ -149,6 +160,12 @@ image on the page.
 You should see that the image is now centered on the page:
 
 ![](fig/06-using-graphics/document-with-centered-image.PNG){alt='Our document with a centered image.'}
+
+::: callout
+
+The `center` environment is not specific to images, and can be used to center any content within the document.
+
+:::
 
 ## "Floating" Images
 
@@ -160,9 +177,6 @@ To make an image float, we can use the `figure` environment:
 
 ```latex
 \subsection{Floating Image}
-
-\kw{Floating images} can move around the page as text is added or removed. We can use the
-\cmd{figure}environment to create a floating image.
 
 \begin{figure}
   \centering
@@ -202,16 +216,6 @@ to use the `ht` option:
   \centering
   \includegraphics[height=2cm]{my-awesome-image}
 \end{figure}
-
-Control the position of a floating image by passing parameters to the \cmd{figure} environment:
-
-\begin{itemize}
-  \item h: Place the float "here" (where it appears in the code)
-  \item t: Place the float at the "top" of the page
-  \item b: Place the float at the "bottom" of the page
-  \item p: Place the float on a "page" by itself
-\end{itemize}
-
 ```
 
 ::: callout
@@ -240,10 +244,7 @@ environment:
 ```latex
 \subsection{Caption}
 
-We can add a \kw{caption} to our floating image by using the \cmd{caption} command inside of the
-\cmd{figure} environment.
-
-\begin{figure}
+\begin{figure}[h]
   \centering
   \includegraphics[height=2cm]{my-awesome-image}
   \caption{This is a caption for our image.}
@@ -276,14 +277,11 @@ place a float at the bottom of the page, even if there is not enough space for i
 
 ## Challenge 1: Can you do it?
 
-Consider again our running example of `example-image.PNG`.
-Include this image into your LaTeX document by using the `figure` environment.
-Make sure that your image is centered and rotate the image by 45 degree.
+Consider again our running example of `my-awesome-image`.
+Start a new document from scratch, and include this image into your LaTeX document by using the `figure` environment.
+Make sure that your image is centered and rotate the image by 45 degrees.
 Add the following caption to your image: "This caption has a **bold** word included."
-How would your LaTeX look like?
-
-
-
+What would your LaTeX look like?
 
 :::::::::::::::::::::::: solution
 
@@ -401,6 +399,22 @@ Reminder: The syntax for creating a new command is:
 \newcommand{\cmdname}[numargs]{definition}
 ```
 
+::: hint
+
+Some code to get you started:
+
+```latex
+\newcommand{\centeredimage}[2]{
+  \begin{???}
+    \centering
+    ???
+    ???
+  \end{???}
+}
+```
+
+:::
+
 :::::::::::::::::::::::: solution
 
 ```latex
@@ -434,47 +448,46 @@ Reminder: The syntax for creating a new command is:
 
 
 Have a look at the following LaTeX code that uses the `wrapfigure` environment.
-Can you already guess how the images will be displayed in your document?
+
+- Can you already guess how the images will be displayed in your document?
+- Try adjusting the values for the width and placement of the images to see how it affects their appearance in the document.
+- Why might we want to use `\textwidth` when specifying the width of an image?
 
 
 ```latex
 \documentclass{article}
 
-\usepackage{wrapfig}
 \usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{wrapfig}
 
 \begin{document}
 
-\begin{wrapfigure}{r}{0.1\textwidth}
+  \lipsum[1]
+
+  \begin{wrapfigure}{r}{3cm}
     \centering
-    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{my-awesome-image}
-\end{wrapfigure}
+    \includegraphics[width=3cm]{my-awesome-image}
+  \end{wrapfigure}
 
-The package wrapfigure lets you position images around your text.
-That comes in handy if you want to integrate images seamlessly into your written sentences.
-Therefore, I add a few more sentences here to showcase this integration to you.
+  \lipsum[2-3]
 
-\begin{wrapfigure}{l}{0.1\textwidth}
+  \begin{wrapfigure}{l}{0.2\textwidth}
     \centering
-    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
-\end{wrapfigure}
+    \includegraphics[width=0.2\textwidth]{example-image}
+  \end{wrapfigure}
 
-Be careful, you need both packages, wrapfig and graphicx, in your preamble to display your images
-and wrap them accordingly. There are several ways to display images, depending on the arguments you
-specify. For instance, you can scale the image width according to the width of the text.
+  \lipsum[4]
 
 \end{document}
 ```
 
 :::::::::::::::::::::::: solution
 
-
-The first image will be placed at the right of the following paragraph of text as `{r}` is
-specified as an argument within the first `wrapfigure` environment.
-The second image will be placed at the left of its following paragraph of text as `{l}` is
-specified as an argument within the second `wrapfigure` environment.
-Moreover, both images are scaled by being 0.1 of the width of the text in your document.
-
+The `wrapfigure` environment allows us to wrap text around an image.
+The first argument specifies the placement of the image (`r` for right, `l` for left), while the second argument specifies the width of the image.
+The `includegraphics` command is the same one we've used before and we are specifying the width of the image using either absolute units like `cm` or relative units like `\textwidth`.
+Using `\textwidth` allows the image to scale relative to the width of the text, which can be useful for maintaining consistent proportions in different document layouts.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -490,9 +503,3 @@ Moreover, both images are scaled by being 0.1 of the width of the text in your d
 - We can add captions to floating images using the `\caption` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-::: spoiler
-
-After this episode, [here is what our LaTeX document looks like](files/document_state/ep-06.tex).
-
-:::
