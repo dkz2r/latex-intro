@@ -144,6 +144,17 @@ When we're using most commands and packages in LaTeX and there's some sort of me
 
 :::
 
+### Paragraph Indentation / Spacing
+
+You may have noticed that when we asked for a `\lipsum` paragraph, the first line of the paragraph is indented.
+We can control this indentation and the spacing between paragraphs using the `\setlength` command with the `\parindent` and `\parskip` lengths. For example:
+
+```latex
+\setlength{\parindent}{0pt} % No indentation for paragraphs
+\setlength{\parskip}{1em}   % Add space between paragraphs
+```
+
+
 ## Defining Custom Commands
 
 Using other people's packages is great, but what if there is some kind of functionality we want to
@@ -221,7 +232,7 @@ Let's take a minute to go through and add the `\kw` command to all the keywords 
 
 :::
 
-::: spoiler
+### Redefining Commands
 
 Related to the `\newcommand` command, we can also use the `\renewcommand` command to change the
 definition of an existing command. This is useful, for example, if we want to change the
@@ -233,7 +244,15 @@ command:
 \renewcommand{\commandname}[number of arguments]{definition}
 ```
 
-:::
+This doesn't just apply to commands that we write!
+We can also use this to change the behavior of commands in packages, or in base LaTeX itself:
+
+```latex
+\renewcommand{\baselinestretch}{1.5}
+```
+
+in the preamble of our document will set the line spacing to 1.5 throughout the document.
+If we decide that we want to change the line spacing later, we can simply use `\renewcommand{\baselinestretch}{new value}` with the desired value, and from that point in the document on it will apply the new line spacing.
 
 ### Code Reuse
 
