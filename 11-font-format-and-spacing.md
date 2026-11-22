@@ -30,8 +30,16 @@ For Example, we can change the font of the entire document by adding the followi
 preamble:
 
 ```latex
+\documentclass{article}
+
+\usepackage{lipsum}
+
 % Change the font of the entire document to a monospace font
 \renewcommand{\familydefault}{\ttdefault}
+
+\begin{document}
+    \lipsum[1-2]
+\end{document}
 ```
 
 When you compile the document you should see that it has changed from this:
@@ -88,16 +96,6 @@ lot of text: the `lipsum` package. This package provides the `\lipsum` command, 
 ```latex
 \usepackage{lipsum}
 ```
-
-::: callout
-
-Lorem Ipsum is a common piece of placeholder text used in publishing and graphic design. It is
-often used to demonstrate the visual form of a document without relying on meaningful content.
-
-The text itself comes from the first-century BC work *De finibus bonorum et malorum* by Marcus
-Tullius Cicero.
-
-:::
 
 In our document, we can now use a blank line to separate paragraphs:
 
