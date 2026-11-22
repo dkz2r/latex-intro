@@ -108,6 +108,24 @@ It functions the same way as the others, but just has a slightly different forma
 
 ```
 
+### Nesting Lists
+
+We can create a list within a list by nesting one environment inside another. For example:
+
+```latex
+\begin{itemize}
+  \item Forest
+
+  \begin{enumerate}
+    \item Tropical
+    \item Temperate
+  \end{enumerate}
+
+  \item Tundra
+  \item Desert
+\end{itemize}
+```
+
 
 ## Challenges
 
