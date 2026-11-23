@@ -258,7 +258,9 @@ Single Green Arrow. Hover your mouse over each one.
 
 The Double Arrow is called "Build and View" whereas the Single Arrow is called "Compile Only".
 Sometimes we don't nessecarily want to view the document, but we want to check that it at least
-isn't broken. We can use the "Compile Only" option to ask LaTeX to
+isn't broken. We can use the "Compile Only" option to ask LaTeX to compile the document, but not
+actually start up the preview, or, if we have an external view set up, to not bother opening that
+second program.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
