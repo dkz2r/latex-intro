@@ -268,7 +268,7 @@ Your LaTeX version should look something like this:
 
 ![](fig/08-tables/challenge-make-a-table.PNG){alt='Example output of a table for challenge 1'}
 
-Note that the last row is a bit different from the others. The first two columns re merged, the
+Note that the last row is a bit different from the others. The first two columns are merged, the
 text "Total" is right-aligned and bold, and the value in the last column is italicized.
 
 (Data for this challenge is from
