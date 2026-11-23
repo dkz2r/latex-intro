@@ -194,8 +194,6 @@ We have the following in our LaTeX document:
 \end{document}
 ```
 
-How would we modify this to change this ordered list to an unordered list?
-
 :::::::::::::::::::::::: solution
 
 ## Answer
