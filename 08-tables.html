@@ -732,7 +732,7 @@ command equipped with it. It is similarly structured as
 <td><em>22,606</em></td>
 </tr></tbody></table><p>Your LaTeX version should look something like this:</p>
 <figure><img src="fig/08-tables/challenge-make-a-table.PNG" alt="Example output of a table for challenge 1" class="figure mx-auto d-block"></figure><p>Note that the last row is a bit different from the others. The first
-two columns re merged, the text “Total” is right-aligned and bold, and
+two columns are merged, the text “Total” is right-aligned and bold, and
 the value in the last column is italicized.</p>
 <p>(Data for this challenge is from <a href="https://www.statista.com/statistics/1546704/monthly-best-selling-car-models-in-germany/" class="external-link">Statista</a>)</p>
 </div>
@@ -916,8 +916,13 @@ our document.</li>
 <li>The <code>xcolor</code> package doesn’t automatically support
 coloring tables, so we need to add the <code>table</code> option to the
 package import. (<code>\usepackage[table]{xcolor}</code>)</li>
-<li><code>\rowcolor{(&lt;color&gt;}</code></li>
-<li><code>\rowcolors{&lt;starting row number&gt;}{&lt;color1&gt;}{&lt;color2&gt;}</code></li>
+<li>before we start the “tabular” environment, we can specify a rule to
+apply alternating colors:
+<code>\rowcolors{&lt;starting row number&gt;}{&lt;color1&gt;}{&lt;color2&gt;}</code>
+</li>
+<li>insude the tabular environment, we can color specific rows by adding
+the line <code>\rowcolor{(&lt;color&gt;}</code> before the row
+data.</li>
 <li>You can make lighter versions of colors by adding
 <code>!&lt;percentage&gt;</code> to the color name. For example,
 <code>red!10</code> is a light red color, while <code>red!90</code> is a
