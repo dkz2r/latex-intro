@@ -45,7 +45,7 @@ document.
 
 For the purposes of this lesson, we'll use the following image:
 
-![](fig/06-using-graphics/my-awesome-image.png){alt='Our example image.'}
+![](fig/07-using-graphics/my-awesome-image.png){alt='Our example image.'}
 
 ::: callout
 
@@ -81,7 +81,7 @@ My Amazing Image:
 
 Your document should now look like this:
 
-![](fig/06-using-graphics/document-with-image.PNG){alt='Our document with an included image.'}
+![](fig/07-using-graphics/document-with-image.PNG){alt='Our document with an included image.'}
 
 ::: callout
 
@@ -129,7 +129,7 @@ A smaller image:
 
 ```
 
-![](fig/06-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
+![](fig/07-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
 
 ::: callout
 
@@ -159,7 +159,7 @@ placing the `\includegraphics` command inside of a `\begin{center}` and `\end{ce
 
 You should see that the image is now centered on the page:
 
-![](fig/06-using-graphics/document-with-centered-image.PNG){alt='Our document with a centered image.'}
+![](fig/07-using-graphics/document-with-centered-image.PNG){alt='Our document with a centered image.'}
 
 ::: callout
 
@@ -187,7 +187,7 @@ To make an image float, we can use the `figure` environment:
 When we render the document, we can see that, even though we placed the image at the end of the
 document, it appears at the top of the page:
 
-![](fig/06-using-graphics/document-with-floating-image.PNG){alt='Our document with a floating image.'}
+![](fig/07-using-graphics/document-with-floating-image.PNG){alt='Our document with a floating image.'}
 
 ::: callout
 
@@ -253,7 +253,7 @@ environment:
 
 When we render the document, we can see that the caption appears below the image:
 
-![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
+![](fig/07-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
 
 ::: callout
 
