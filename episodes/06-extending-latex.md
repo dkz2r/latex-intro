@@ -451,6 +451,8 @@ For the third word, we change the optional argument to "blue".
 ```latex
 \documentclass{article}
 
+\usepackage{xcolor}
+
 \newcommand{\kw}[2][red]{\textcolor{#1}{\textbf{#2}}}
 
 \begin{document}
