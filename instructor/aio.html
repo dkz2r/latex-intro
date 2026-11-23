@@ -539,7 +539,7 @@ file as <code>main.tex</code>.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
 <p>The TeXStudio interface is divided into several sections:</p>
 <p>The <strong>Editor</strong>: This is where you write your LaTeX code.
 It supports syntax highlighting and basic code completion.</p>
@@ -575,7 +575,7 @@ encountered will be displayed here.</p></li>
 <figure><img src="../fig/01-introduction/TeXStudioEditor.PNG" alt="An image of the TeXStudio interface, showing the locations of the main UI elements." class="figure mx-auto d-block"><div class="figcaption">TeXStudio Interface</div>
 </figure>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
 <p>The TeXworks interface is divided into three main sections:</p>
 <p>The <strong>Editor</strong>: This is where you write your LaTeX code.
 It supports syntax highlighting and basic code completion.</p>
@@ -634,13 +634,13 @@ to use. For this workshop, we will use the default engine, PDFLaTeX.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
 <p>Now click the green double arrow icon on the toolbar (or press “F5”
 on your keyboard). This will compile the document and update the preview
 pane with the rendered output. You should see a PDF preview of the
 document with the text “Hello, LaTeX!”.</p>
 </div>
-<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
+<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
 <p>Now click the green “Typeset” button in the top left corner of the
 interface. This will compile the document and update the preview pane
 with the rendered output. You should see a PDF preview of the document
@@ -1586,7 +1586,7 @@ document, we can see our errors:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
 <figure><img src="../fig/03-error-handling/document-errors-texstudio.png" alt="The TeXStudio Editor showing a significant error in our document." class="figure mx-auto d-block"><div class="figcaption">Error in the LaTeX document</div>
 </figure><p>Several lines of our code are highlighted in red, and the message box
 at the bottom of the screen has several entries in it now.</p>
@@ -1594,7 +1594,7 @@ at the bottom of the screen has several entries in it now.</p>
 highlighted lines in the editor, and clicking on each row moves the
 curosor in the editor to the corresponding line.</p>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
 <figure><img src="../fig/03-error-handling/document-errors-texworks.png" alt="The TeXWorks Editor showing a significant error in our document.." class="figure mx-auto d-block"><div class="figcaption">Error in the LaTeX document</div>
 </figure><p>The greens triangle we clicked on is now a red octagon, indicating
 that there is an error. There’s also now a second tab that we can see in
@@ -1618,7 +1618,7 @@ l.2 \documentclass{article}</code></pre>
 <p>Keep hitting <return> to proceed through the error messages. You will
 see a series of error messages as a result of our initial error.</return></p>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
 <p>If we run the command <code>pdflatex main.tex</code> in the terminal,
 we will see an error message:</p>
 <figure><img src="../fig/03-error-handling/document-errors-terminal.png" alt="Error in the terminal." class="figure mx-auto d-block"><div class="figcaption">Error in the terminal</div>
@@ -3476,7 +3476,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-07-using-graphics"><p>Content from <a href="07-using-graphics.html">Using Graphics</a></p>
 <hr>
-<p>Last updated on 2026-11-22 |
+<p>Last updated on 2026-11-23 |
 
         <a href="https://github.com/dkz2r/latex-intro/edit/main/episodes/07-using-graphics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 45 minutes</p>
@@ -3547,7 +3547,7 @@ before including it in your document.</p>
 </div>
 </div>
 <p>For the purposes of this lesson, we’ll use the following image:</p>
-<figure><img src="../fig/06-using-graphics/my-awesome-image.png" alt="Our example image." class="figure mx-auto d-block"></figure><div id="callout2" class="callout">
+<figure><img src="../fig/07-using-graphics/my-awesome-image.png" alt="Our example image." class="figure mx-auto d-block"></figure><div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -3586,7 +3586,7 @@ the <code>\includegraphics</code> command:</p>
 <span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <p>Your document should now look like this:</p>
-<figure><img src="../fig/06-using-graphics/document-with-image.PNG" alt="Our document with an included image." class="figure mx-auto d-block"></figure><div id="callout3" class="callout">
+<figure><img src="../fig/07-using-graphics/document-with-image.PNG" alt="Our document with an included image." class="figure mx-auto d-block"></figure><div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -3641,7 +3641,7 @@ the image:</p>
 <span id="cb3-23"><a href="#cb3-23" tabindex="-1" aria-label="code-block-3-23"></a></span>
 <span id="cb3-24"><a href="#cb3-24" tabindex="-1" aria-label="code-block-3-24"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<figure><img src="../fig/06-using-graphics/document-with-small-image.PNG" alt="Our document with a smaller image." class="figure mx-auto d-block"></figure><div id="callout4" class="callout">
+<figure><img src="../fig/07-using-graphics/document-with-small-image.PNG" alt="Our document with a smaller image." class="figure mx-auto d-block"></figure><div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -3686,7 +3686,7 @@ command inside of a <code>\begin{center}</code> and
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span></code></pre>
 </div>
 <p>You should see that the image is now centered on the page:</p>
-<figure><img src="../fig/06-using-graphics/document-with-centered-image.PNG" alt="Our document with a centered image." class="figure mx-auto d-block"></figure><div id="callout5" class="callout">
+<figure><img src="../fig/07-using-graphics/document-with-centered-image.PNG" alt="Our document with a centered image." class="figure mx-auto d-block"></figure><div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -3721,7 +3721,7 @@ environment:</p>
 <p>When we render the document, we can see that, even though we placed
 the image at the end of the document, it appears at the top of the
 page:</p>
-<figure><img src="../fig/06-using-graphics/document-with-floating-image.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout6" class="callout">
+<figure><img src="../fig/07-using-graphics/document-with-floating-image.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -3810,7 +3810,7 @@ command inside of the <code>figure</code> environment:</p>
 </div>
 <p>When we render the document, we can see that the caption appears
 below the image:</p>
-<figure><img src="../fig/06-using-graphics/document-with-floating-image-caption.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout8" class="callout">
+<figure><img src="../fig/07-using-graphics/document-with-floating-image-caption.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout8" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -4161,7 +4161,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-08-tables"><p>Content from <a href="08-tables.html">Tables</a></p>
 <hr>
-<p>Last updated on 2026-11-22 |
+<p>Last updated on 2026-11-23 |
 
         <a href="https://github.com/dkz2r/latex-intro/edit/main/episodes/08-tables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -4335,7 +4335,7 @@ makes the code much easier to read.</p>
 values of each row are separated by <code>&amp;</code> and the rows are
 separated by <code>\\</code>. We do not yet have any horizontal lines in
 the table, so it will look like this:</p>
-<figure><img src="../fig/07-tables/simple-table.PNG" alt="Example output of a simple table" class="figure mx-auto d-block"></figure><div id="callout4" class="callout">
+<figure><img src="../fig/08-tables/simple-table.PNG" alt="Example output of a simple table" class="figure mx-auto d-block"></figure><div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -4408,7 +4408,7 @@ horizontal lines:</p>
 <span id="cb6-15"><a href="#cb6-15" tabindex="-1" aria-label="code-block-6-15"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
 </div>
 <p>Your table should look something like this:</p>
-<figure><img src="../fig/07-tables/table-with-horizontal-lines.PNG" alt="Example output of a table with horizontal lines" class="figure mx-auto d-block"></figure><div id="callout5" class="callout">
+<figure><img src="../fig/08-tables/table-with-horizontal-lines.PNG" alt="Example output of a table with horizontal lines" class="figure mx-auto d-block"></figure><div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -4450,7 +4450,7 @@ column to end the line.</p>
 <span id="cb7-17"><a href="#cb7-17" tabindex="-1" aria-label="code-block-7-17"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
 </div>
 <p>This table should come out looking something like this:</p>
-<figure><img src="../fig/07-tables/table-with-partial-lines.PNG" alt="Example output of a table with partial lines" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="merging-cells">Merging Cells<a class="anchor" aria-label="anchor" href="#merging-cells"></a>
+<figure><img src="../fig/08-tables/table-with-partial-lines.PNG" alt="Example output of a table with partial lines" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="merging-cells">Merging Cells<a class="anchor" aria-label="anchor" href="#merging-cells"></a>
 </h2>
 <hr class="half-width">
 <p>We can merge cells horizontally using the <code>\multicolumn</code>
@@ -4500,7 +4500,7 @@ command equipped with it. It is similarly structured as
 </div>
 </div>
 <p>This will create a table that looks like this:</p>
-<figure><img src="../fig/07-tables/table-with-merged-cell.PNG" alt="Example output of a table with merged cells" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
+<figure><img src="../fig/08-tables/table-with-merged-cell.PNG" alt="Example output of a table with merged cells" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
 </h2>
 <hr class="half-width">
 <div id="challenge-1-can-you-do-it" class="callout challenge">
@@ -4552,7 +4552,7 @@ command equipped with it. It is similarly structured as
 </tbody>
 </table>
 <p>Your LaTeX version should look something like this:</p>
-<figure><img src="../fig/07-tables/challenge-make-a-table.PNG" alt="Example output of a table for challenge 1" class="figure mx-auto d-block"></figure><p>Note that the last row is a bit different from the others. The first
+<figure><img src="../fig/08-tables/challenge-make-a-table.PNG" alt="Example output of a table for challenge 1" class="figure mx-auto d-block"></figure><p>Note that the last row is a bit different from the others. The first
 two columns re merged, the text “Total” is right-aligned and bold, and
 the value in the last column is italicized.</p>
 <p>(Data for this challenge is from <a href="https://www.statista.com/statistics/1546704/monthly-best-selling-car-models-in-germany/" class="external-link">Statista</a>)</p>
@@ -4564,7 +4564,7 @@ the value in the last column is italicized.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4642,7 +4642,7 @@ columns combined?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The <code>multirow</code> command is used here to merge rows
 together. In the case here, we have two <code>multirow</code> commands,
@@ -4652,7 +4652,7 @@ rows should be merged together, the second argument specifies the width
 of the merged cell, and the third argument specifies the contents of the
 merged cell.</p>
 <p>The table created by this code will look like this:</p>
-<figure><img src="../fig/07-tables/challenge-merged-rows.PNG" alt="Example output of a table with merged rows" class="figure mx-auto d-block"></figure>
+<figure><img src="../fig/08-tables/challenge-merged-rows.PNG" alt="Example output of a table with merged rows" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -4685,7 +4685,7 @@ category “Bread”.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4751,7 +4751,7 @@ darker red color.</li>
 <p>There’s no right answer to this challenge, so feel free to experiment
 with different colors!</p>
 <p>Here’s an example of what you can do:</p>
-<figure><img src="../fig/07-tables/challenge-colorful-table.PNG" class="figure mx-auto d-block"></figure>
+<figure><img src="../fig/08-tables/challenge-colorful-table.PNG" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -4760,7 +4760,7 @@ with different colors!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4831,7 +4831,7 @@ package can be used to merge rows in a table.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-07.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -5046,7 +5046,7 @@ using the <code>\ref</code> command.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Use the <code>figure</code> environment to wrap the image, and use
 the <code>\includegraphics</code> command to add the image. In order to
@@ -5061,7 +5061,7 @@ the <code>figure</code> environment.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
 <div class="accordion-body">
 <p>Make sure that the <code>\label{}</code> command comes after the
 <code>\caption{}</code> command, and that the <code>\ref{}</code>
@@ -5075,7 +5075,7 @@ command refers to the correct label.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5153,7 +5153,7 @@ correct. Why or why not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You might have expected the output to be either “As indicated in
 Section 2, …” or “As indicated in Section ???”, but it actually returns
@@ -5212,7 +5212,7 @@ issue. What is it? Why does this happen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The <code>\ref{}</code> command is correctly written, but the
 <code>\ref{}</code> command only returns the number of the label it is
@@ -5243,7 +5243,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-08.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -5393,7 +5393,7 @@ backslash(<code>\</code>) here.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Math Mode in LaTeX is not just for LaTeX users! It is also used other
 tools like Jupyter Notebooks, R Markdown and many markdown processors.
@@ -5530,7 +5530,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5565,7 +5565,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
@@ -5617,7 +5617,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5756,7 +5756,7 @@ SSW.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>% 1. Speed of light </p>
 <p>% 2. Standard atmospheric pressure </p>
@@ -5789,7 +5789,7 @@ writing numbers with their scientific unit.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-09.tex">here is
 what our LaTeX document looks like</a>.</p>
