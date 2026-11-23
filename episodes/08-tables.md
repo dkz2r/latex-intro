@@ -412,8 +412,8 @@ A few things that will help you:
 - We need to import the `xcolor` package in the preamble of our document.
 - The `xcolor` package doesn't automatically support coloring tables, so we need to add the `table`
   option to the package import. (`\usepackage[table]{xcolor}`)
-- `\rowcolor{(<color>}`
-- `\rowcolors{<starting row number>}{<color1>}{<color2>}`
+- before we start the "tabular" environment, we can specify a rule to apply alternating colors: `\rowcolors{<starting row number>}{<color1>}{<color2>}`
+- insude the tabular environment, we can color specific rows by adding the line `\rowcolor{(<color>}` before the row data.
 - You can make lighter versions of colors by adding `!<percentage>` to the color name. For example,
   `red!10` is a light red color, while `red!90` is a darker red color.
 
