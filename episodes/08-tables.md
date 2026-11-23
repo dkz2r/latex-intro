@@ -411,7 +411,7 @@ A few things that will help you:
 
 - We need to import the `xcolor` package in the preamble of our document.
 - The `xcolor` package doesn't automatically support coloring tables, so we need to add the `table`
-  option to the package import.
+  option to the package import. (`\usepackage[table]{xcolor}`)
 - `\rowcolor{(<color>}`
 - `\rowcolors{<starting row number>}{<color1>}{<color2>}`
 - You can make lighter versions of colors by adding `!<percentage>` to the color name. For example,
