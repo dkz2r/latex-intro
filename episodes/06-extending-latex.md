@@ -319,28 +319,7 @@ We'll use this command in later sections.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Importing a new package
-
-A useful package to preview what your document will look like before your write a lot of text is
-the `lipsum` package. This package provides sample text blocks from a common placeholder text.
-
-How would you add the lipsum package to the preamble of your document?
-
-:::::::::::::::::::::::: solution
-
-## Answer
-
-Add the line `\usepackage{lipsum}` to the preamble of your document.
-
-You can then use the `\lipsum` command in the body of your document to add some dummy text.
-
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 2: What does this mean?
+## Challenge: What does this mean?
 
 The definition of a new command in LaTeX is done with the `\newcommand` command. The syntax for this
 command is:
@@ -376,7 +355,7 @@ use it like this:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 3: Can you write your own command with two arguments?
+## Challenge: Can you write your own command with two arguments?
 
 Suppose you want to define a new command that takes as input two words as arguments.
 This first word shall be written **bold** while the second word shall be written *italic*.
@@ -417,7 +396,7 @@ This newly defined command highlights these two words: \boit{Apple}{Banana}.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 4: Optional arguments
+## Challenge: Optional arguments
 
 New commands can be made even more flexible by defining commands that take an optional argument.
 Then the general LaTeX code for this looks like this:
